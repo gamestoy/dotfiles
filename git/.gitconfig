@@ -31,7 +31,7 @@
 	frebase= !HASH=`git log --pretty=oneline | head -n 10 | fzf` && git rebase -i `echo ${HASH} | awk '{ print $1 }'`^
 	freset= !HASH=`git log --pretty=oneline | head -n 50 | fzf` && git reset --soft `echo ${HASH} | awk '{ print $1 }'`^
 [push]
-	default = simple
+	default = current
 [pull]
 	rebase = true
 [merge]
