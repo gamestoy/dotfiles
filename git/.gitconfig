@@ -7,6 +7,18 @@
 	status = auto
 [branch]
 	autosetuprebase = always
+[push]
+	default = current
+[pull]
+	rebase = true
+[merge]
+	ff = only
+[commit]
+	gpgsign = true
+[help]
+# Automatically correct and execute mistyped commands
+	autocorrect = 1
+	
 [alias]
 	ci = commit --verbose
 	co = checkout
@@ -25,16 +37,8 @@
 	pr=!open https://github.com/$(git repo)/compare/$(git current)?expand=1
 
 
-  # Welcome to pam/fzf heaven. xargs hell
+	# Welcome to pam/fzf heaven. xargs hell
 	fb= !BRANCH=`git recent | fzf` && git checkout ${BRANCH}
 	ffix= !HASH=`git log --pretty=oneline | head -n 100 | fzf` && git fixit `echo ${HASH} | awk '{ print $1 }'`
 	frebase= !HASH=`git log --pretty=oneline | head -n 10 | fzf` && git rebase -i `echo ${HASH} | awk '{ print $1 }'`^
 	freset= !HASH=`git log --pretty=oneline | head -n 50 | fzf` && git reset --soft `echo ${HASH} | awk '{ print $1 }'`^
-[push]
-	default = current
-[pull]
-	rebase = true
-[merge]
-	ff = only
-[commit]
-	gpgsign = true
