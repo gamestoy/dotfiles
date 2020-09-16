@@ -16,8 +16,9 @@ brew install vim --with-override-system-vi
 brew install grep
 
 brew install zsh
-brew install zsh-completions
+brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
+brew install starship
 brew install fzf
 brew install autojump
 brew install exa
