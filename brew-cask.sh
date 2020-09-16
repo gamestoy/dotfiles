@@ -11,3 +11,4 @@ brew cask install visual-studio-code
 
 brew tap caskroom/fonts 
 brew cask install font-fira-code
+brew cask install font-jetbrains-mono
