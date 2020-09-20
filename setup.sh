@@ -50,7 +50,7 @@ fi
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 # install all the things
@@ -59,11 +59,6 @@ fi
 
 ### end of homebrew
 ##############################################################################################################
-
-### OH MY ZSH
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-npm install -g pure-prompt
 
 # Type `git open` to open the GitHub page or website for a repository.
 npm install -g git-open
