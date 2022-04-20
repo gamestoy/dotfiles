@@ -1,0 +1,24 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+
+brew "node"
+brew "python"
+
+brew "coreutils"
+brew "unar"
+brew "wget"
+brew "jq"
+brew "ripgrep"
+brew "httpie"
+brew "exa"
+
+brew "jenv"
+brew "nvm"
+brew "maven"
+
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+brew "starship"
+brew "fzf"
+brew "autojump"

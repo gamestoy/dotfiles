@@ -1,0 +1,47 @@
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[color]
+	diff = auto
+	branch = auto
+	interactive = auto
+	status = auto
+[branch]
+	autosetuprebase = always
+[push]
+	default = current
+[pull]
+	rebase = true
+[merge]
+	ff = only
+[commit]
+	gpgsign = true
+[help]
+# Automatically correct and execute mistyped commands
+	autocorrect = 1
+	
+[alias]
+	ci = commit --verbose
+	cm = commit -m
+	ca = commit --amend
+	co = checkout
+	cp = cherry-pick
+	st = status --short
+	rc = rebase --continue
+	br = branch
+	cached = diff --cached
+	undo = reset --soft HEAD~1
+	show-patch = format-patch -1 --stdout
+	sha = rev-parse HEAD
+	origin = config --get remote.origin.url
+	current = rev-parse --abbrev-ref HEAD
+	recent = !git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | head -n 20
+	repo=!git remote -v | grep '@.*fetch' | sed 's/.*:\\(.*\\).git.*/\\1/g'
+	pr=!open https://github.com/$(git repo)/compare/$(git current)?expand=1
+
+
+	# Welcome to pam/fzf heaven. xargs hell
+	fb= !BRANCH=`git recent | fzf` && git checkout ${BRANCH}
+	ffix= !HASH=`git log --pretty=oneline | head -n 100 | fzf` && git fixit `echo ${HASH} | awk '{ print $1 }'`
+	frebase= !HASH=`git log --pretty=oneline | head -n 10 | fzf` && git rebase -i `echo ${HASH} | awk '{ print $1 }'`^
+	freset= !HASH=`git log --pretty=oneline | head -n 50 | fzf` && git reset --soft `echo ${HASH} | awk '{ print $1 }'`^
