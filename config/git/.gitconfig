@@ -38,7 +38,7 @@
 	recent = !git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | head -n 20
 	repo=!git remote -v | grep '@.*fetch' | sed 's/.*:\\(.*\\).git.*/\\1/g'
 	pr=!open https://github.com/$(git repo)/compare/$(git current)?expand=1
-
+  reset-author = commit --amend --reset-author --no-edit
 
 	# Welcome to pam/fzf heaven. xargs hell
 	fb= !BRANCH=`git recent | fzf` && git checkout ${BRANCH}
