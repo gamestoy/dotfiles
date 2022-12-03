@@ -1,0 +1,17 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+
+brew "node"
+
+brew "coreutils"
+brew "unar"
+brew "wget"
+brew "jq"
+brew "ripgrep"
+brew "httpie"
+
+brew "jenv"
+brew "pyenv"
+brew "pipenv"
+brew "nvm"
+brew "maven"

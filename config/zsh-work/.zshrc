@@ -4,6 +4,7 @@
  
 source ~/.zsh/alias.zsh
 source ~/.zsh/environment.zsh
+source ~/.zsh/environment_work.zsh
 source ~/.zsh/fzf.zsh
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh

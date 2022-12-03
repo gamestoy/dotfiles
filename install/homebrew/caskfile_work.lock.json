@@ -1,0 +1,50 @@
+{
+  "entries": {
+    "tap": {
+      "homebrew/cask": {
+        "revision": "56665e845f7ed59ef379e3dcf09cbc8d819810ab"
+      },
+      "homebrew/cask-drivers": {
+        "revision": "d4d1ff85a0897bed8dfb73ffe4f60fdc95358d8d"
+      },
+      "homebrew/cask-fonts": {
+        "revision": "d13469e12823232c5ee8293552068ddfd83da707"
+      },
+      "homebrew/cask-versions": {
+        "revision": "6811d75597be55f019d9ac30434dd9fe51f4f00b"
+      }
+    },
+    "cask": {
+      "intellij-idea": {
+        "version": "2022.3,223.7571.182",
+        "options": {
+          "full_name": "intellij-idea"
+        }
+      },
+      "gpg-suite": {
+        "version": "2022.2",
+        "options": {
+          "full_name": "gpg-suite"
+        }
+      },
+      "visual-studio-code": {
+        "version": "1.73.1",
+        "options": {
+          "full_name": "visual-studio-code"
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "ventura": {
+        "HOMEBREW_VERSION": "3.6.13",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "f82888dacdf493c223fca25eee9f812d37a884d9",
+        "CLT": "14.1.0.0.1.1666437224",
+        "Xcode": "14.1",
+        "macOS": "13.0.1"
+      }
+    }
+  }
+}
