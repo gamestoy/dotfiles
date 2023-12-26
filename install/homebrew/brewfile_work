@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/core"
 
 brew "node"
+brew "nvm"
 
 brew "coreutils"
 brew "unar"
@@ -13,5 +14,4 @@ brew "httpie"
 brew "jenv"
 brew "pyenv"
 brew "pipenv"
-brew "nvm"
-brew "maven"
+
