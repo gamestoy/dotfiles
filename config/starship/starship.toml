@@ -16,11 +16,12 @@ style = "fg:#7ba7b4"
 truncation_length = 4
 
 [character]
-success_symbol = "[❯](#50899e)"
+success_symbol = "[❯](#8EA71E)"
 
 [git_branch]
-format = "[$branch]($style)"
-style = "red"
+format = "[$symbol](red)[$branch]($style)"
+style = "#D19797"
+symbol = ''
 
 [git_status]
 format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218)( $ahead_behind$stashed)]($style)"
@@ -47,10 +48,10 @@ style = "bright-black"
 
 [nodejs]
 symbol = ""
-format = "[$symbol](white) [$version]($style) "
+format = "[$symbol](#FAA41D) [$version]($style) "
 style = "bold #dfba59"
 
 [java]
 symbol = ""
-format = "[$symbol](white) [$version]($style) "
+format = "[$symbol](#FAA41D) [$version]($style) "
 style = "bold #dfba59"
