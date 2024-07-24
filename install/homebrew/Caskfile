@@ -2,6 +2,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
 cask "google-chrome"
+cask "arc"
 cask "raycast"
 cask "rectangle"
 cask "vlc"

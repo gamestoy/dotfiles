@@ -1,5 +1,5 @@
 #EXA
-export EXA_COLORS="da=38;5;245"
+export EZA_COLORS="da=38;5;245"
 
 typeset -A ZSH_HIGHLIGHT_STYLES 
 ZSH_HIGHLIGHT_STYLES[suffix-alias]="fg=#53c99e"

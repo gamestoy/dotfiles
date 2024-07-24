@@ -2,3 +2,5 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
 cask "visual-studio-code"
+cask "cursor"
+cask "docker"

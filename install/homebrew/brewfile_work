@@ -13,5 +13,7 @@ brew "httpie"
 
 brew "jenv"
 brew "pyenv"
-brew "pipenv"
+brew "poetry"
+
+brew "k9s"
 
