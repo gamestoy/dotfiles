@@ -1,0 +1,25 @@
+font-family="JetBrainsMono Nerd Font"
+font-thicken = true
+bold-is-bright=true
+minimum-contrast=1
+palette = 0=#000000
+palette = 1=#f17779
+palette = 2=#8EA71E
+palette = 3=#F1C34F
+palette = 4=#4B9ECD
+palette = 5=#cc99cc
+palette = 6=#66cccc
+palette = 7=#fffefe
+palette = 8=#000000
+palette = 9=#f17779
+palette = 10=#80B27F
+palette = 11=#DAC391
+palette = 12=#9DAFB1
+palette = 13=#cc99cc
+palette = 14=#66cccc
+palette = 15=#fffefe
+background = #2c2c2c
+foreground = #cccccc
+cursor-color = #cccccc
+selection-background = #505050
+selection-foreground = #2c2c2c

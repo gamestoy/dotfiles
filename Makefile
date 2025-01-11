@@ -43,7 +43,7 @@ config-files:
 	cp -r $(DOTFILES_DIR)/config/git/. $(CONFIG_BASE_PATH)
 	mkdir -p $(CONFIG_BASE_PATH)/.config
 	cp -r $(DOTFILES_DIR)/config/starship/. $(CONFIG_BASE_PATH)/.config
-	cp -r $(DOTFILES_DIR)/config/kitty $(CONFIG_BASE_PATH)/.config
+	cp -r $(DOTFILES_DIR)/config/ghostty $(CONFIG_BASE_PATH)/.config
 
 config-files-work: config-files
 	cp -r $(DOTFILES_DIR)/config/zsh-work/. $(CONFIG_BASE_PATH)
