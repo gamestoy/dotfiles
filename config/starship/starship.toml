@@ -1,57 +1,163 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 format = """
-$username\
-$hostname\
+[](color_red)\
+$os\
 $directory\
+[](fg:color_red bg:color_cream)\
 $git_branch\
-$git_state\
 $git_status\
-$line_break\
-$python\
+[](fg:color_cream bg:color_blue)\
+$c\
+$rust\
+$golang\
 $nodejs\
+$php\
 $java\
-$character"""
+$kotlin\
+$haskell\
+$python\
+[ ](fg:color_blue)\
+$line_break$character"""
+
+palette = 'buenos_aires'
+
+[palettes.buenos_aires]
+color_fg0 = '#fbf1c7'
+color_fg1 = '#474747'
+color_fg2 = '#fbf3d2'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_black = '#2c2c2c'
+color_blue = '#9DAFB1'
+color_aqua = '#689d6a'
+color_green = '#98971a'
+color_orange = '#ffcc66'
+color_cream = '#E3D0B0'
+color_purple = '#b16286'
+color_red = '#d65d0e'
+color_yellow = '#F1C34F'
+color_grey = '#505050'
+color_warning = '#f17779'
+
+[os]
+disabled = false
+style = "bg:color_red fg:color_fg2"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "bg:color_red fg:color_fg0"
+style_root = "bg:color_red fg:color_fg0"
+format = '[ $user ]($style)'
 
 [directory]
-style = "fg:#7ba7b4"
-truncation_length = 4
+style = "fg:color_fg0 bg:color_red"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
 
-[character]
-success_symbol = "[❯](#8EA71E)"
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
 
 [git_branch]
-format = "[$symbol](red)[$branch]($style)"
-style = "#D19797"
-symbol = ''
+symbol = ""
+style = "bg:color_cream"
+format = '[[ $symbol](fg:color_green bg:color_cream) [$branch ](fg:color_fg1 bg:color_cream)]($style)'
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218)( $ahead_behind$stashed)]($style)"
-style = "225"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
-stashed = "≡"
-
-[git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "bright-black"
-
-[cmd_duration]
-format = " [$duration]($style) "
-style = "yellow"
-
-[python]
-format = "[$virtualenv]($style) "
-style = "bright-black"
+style = "bg:color_cream"
+format = '[[($all_status$ahead_behind )](fg:color_warning bg:color_cream)]($style)'
 
 [nodejs]
 symbol = ""
-format = "[$symbol](#FAA41D) [$version]($style) "
-style = "bold #dfba59"
+style = "bg:color_blue"
+format = '[[ $symbol](fg:color_yellow bg:color_blue)[( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[c]
+symbol = " "
+style = "bg:color_blue"
+format = '[[ $symbol](fg:color_yellow bg:color_blue)[( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol](fg:color_yellow bg:color_blue)[( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol](fg:color_yellow bg:color_blue)[( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[php]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol](fg:color_yellow bg:color_blue)[( $version) ](fg:color_fg0 bg:color_blue)]($style)'
 
 [java]
-symbol = ""
-format = "[$symbol](#FAA41D) [$version]($style) "
-style = "bold #dfba59"
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol](fg:color_yellow bg:color_blue)[( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol](fg:color_yellow bg:color_blue)[( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol](fg:color_yellow bg:color_blue)[( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[python]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol](fg:color_yellow bg:color_blue)[( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:color_bg3"
+format = '[[ $symbol](fg:color_yellow bg:color_blue)[( $context) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[conda]
+style = "bg:color_bg3"
+format = '[[ $symbol](fg:color_yellow bg:color_blue)[( $environment) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:color_bg1"
+format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = "[❯](color_red)[❯](color_cream)[❯](color_blue)"
